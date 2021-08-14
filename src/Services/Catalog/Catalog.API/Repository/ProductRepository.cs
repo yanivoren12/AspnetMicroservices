@@ -40,7 +40,7 @@ namespace Catalog.API.Repository
             return await context.Products
                 .Find(Builders<Product>
                 .Filter
-                .ElemMatch(p => p.Category, categoryName))
+                .Eq(p => p.Category, categoryName))
                 .ToListAsync();
         }
 
