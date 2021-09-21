@@ -33,10 +33,10 @@ namespace Discount.GRPC.Extentions
                     Connection = connection
                 };
 
-                command.CommandText = "DROP TABLE IF EXISTS Coupon";
+                command.CommandText = "DROP TABLE IF EXISTS coupon";
                 command.ExecuteNonQuery();
 
-                command.CommandText = @"CREATE TABLE Coupon(Id Serial PRIMARY KEY,
+                command.CommandText = @"CREATE TABLE coupon(Id Serial PRIMARY KEY,
                                                                 ProductName VARCHAR(24) NOT NULL,
                                                                 Description TEXT,
                                                                 Amount INT)";
