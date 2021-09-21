@@ -36,7 +36,7 @@ namespace Discount.API.Controllers
 
         [HttpPut]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
-        public async Task<ActionResult<Coupon>> UpdateDiscount([FromBody] Coupon coupon)
+        public async Task<IActionResult> UpdateDiscount([FromBody] Coupon coupon)
         {
             await repository.UpdateDiscount(coupon);
             return NoContent();
